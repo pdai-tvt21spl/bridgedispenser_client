@@ -184,6 +184,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                             status.lock_id = copy.copy(commandToHandle[1])
                             print(status.lock_id)
                         else:
+                            status.lock_id = copy.copy(commandToHandle[1])
                             activeTask = (commandToHandle[0] + '\0').encode()
                     elif commandToHandle[0] == "dispenser":
                         print(status.lock_id)
